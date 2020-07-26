@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+/* font-family: 'Advent Pro', sans-serif; */
+/* font-family: 'Coda', cursive; */
+
+/* https://coolors.co/eae8ff-d8d5db-adacb5-2d3142-b0d7ff */
+:root{
+    --primary:#fa0303;
+    --primaryDark:#ff8901;
+    --light:#0a0a09;
+    --accent:#c8ff01;
+}
+
+body{
+    margin:0;
+    background-color:var(--primaryDark);
+    color:var(--light);
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+}
+
+h1,h2{
+    font-family: 'Abhaya Libre', serif;
+}
+
+p{
+    font-family: 'Advent Pro', sans-serif;
+}
+
+header h1{
+    font-size: 40px;
+}
+
+header p{
+    font-size: 25px;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#profile{
+    width: 234px;
+}
+#bpl{
+    width: 234px;
+}
+#mb{
+    width: 234px;
+}
+#game{
+    width: 234px;
+}
+#jg{
+    width: 234px;
+}
+
+.card{
+    width:500px;
+    padding: 25px;
+    border-left: solid 1px var(--accent);
+    border-right: solid 1px var(--accent);
+    border-top:solid 1px transparent;
+    border-bottom:solid 1px transparent;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+    transition: border 500ms;
+}
+
+.card:hover{
+    border-top:solid 1px var(--accent);
+    border-bottom:solid 1px var(--accent);
+}
+
+footer{
+    margin-top: 50px;
+    background-color: var(--primary);
+    color: var(--primaryDark);
+    width: 100%;
+    flex: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 1030px) {
+    .card-container {
+        flex-direction: column;
+    }
+    .card {
+        width: 80%;
+    }
+     
+}
+
+@media(max-width: 530px) {
+    .card img {
+        width: 80%;
+        height:initial;
+    }
+}
